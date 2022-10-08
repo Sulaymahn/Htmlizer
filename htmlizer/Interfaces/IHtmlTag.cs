@@ -16,7 +16,7 @@ namespace Htmlizer.Interfaces
         IEnumerable<IHtmlAttribute> Attributes { get; }
         IEnumerable<IHtmlAttribute> AllowedAttributes { get; }
         IEnumerable<IHtmlAttribute> RequiredAttributes { get; }
-        void AddAttribute(IHtmlAttribute attribute);
-        void AddChild(IHtmlTag tag);
+        void Add(IHtmlAttribute attribute);
+        void Add(IHtmlTag tag);
     }
 }

@@ -7,6 +7,6 @@ var paragraph = new Paragraph()
     Text = $" I am so {new Italic() { Text = "Angry"}.ToHtml()}"
 };
 var div = new Div();
-div.AddChild(paragraph);
+div.Add(paragraph);
 
 Console.WriteLine(paragraph.ToHtml());

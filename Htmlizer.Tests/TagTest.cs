@@ -23,7 +23,7 @@ namespace Htmlizer.Tests
         public void NestedTagPararaphTest()
         {
             var paragraph = "hey".ToParagraph(); 
-            paragraph.AddChild("Hello".ToItalic());
+            paragraph.Add("Hello".ToItalic());
             Assert.That($"{paragraph}", Is.EqualTo("<p>hey<i>Hello</i></p>"));
         }
 
@@ -31,7 +31,7 @@ namespace Htmlizer.Tests
         public void HtmlFileTest()
         {
             var html = new Html();
-            html.Body.AddChild("Hello world!".ToParagraph());
+            html.Body.Add("Hello world!".ToParagraph());
             Assert.That($"{html}", Is.EqualTo("<html><head></head><body><p>Hello world!</p></body></html>"));
         }
     }

@@ -18,8 +18,8 @@ namespace Htmlizer.Bases
         public IEnumerable<IHtmlAttribute> Attributes { get; protected set;} = new List<IHtmlAttribute>();
         public IEnumerable<IHtmlAttribute> AllowedAttributes { get; protected set; } = new List<IHtmlAttribute>();
         public IEnumerable<IHtmlAttribute> RequiredAttributes { get; protected set; } = new List<IHtmlAttribute>();
-        public virtual void AddAttribute(IHtmlAttribute attribute) => Attributes = Attributes.Append(attribute);
-        public virtual void AddChild(IHtmlTag tag) => Children = Children.Append(tag);
+        public virtual void Add(IHtmlAttribute attribute) => Attributes = Attributes.Append(attribute);
+        public virtual void Add(IHtmlTag tag) => Children = Children.Append(tag);
         public override string ToString() => this.ToHtml();
     }
 }

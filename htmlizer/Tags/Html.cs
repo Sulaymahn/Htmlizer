@@ -10,8 +10,13 @@ namespace Htmlizer.Tags
         public Body Body { get => (Body)Children.First(x => x.GetType() == typeof(Body)); }
         public Html()
         {
-            AddChild(new Head());
-            AddChild(new Body());
+            Add(new Head());
+            Add(new Body());
+        }
+
+        public override string ToString()
+        {
+            return "<!DOCTYPE html>" + base.ToString();
         }
     }
 }
