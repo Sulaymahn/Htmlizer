@@ -2,6 +2,7 @@ using Htmlizer.Interfaces;
 using Htmlizer.Engine;
 using Htmlizer.Tags;
 using NUnit.Framework;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Htmlizer.Tests
 {
@@ -19,16 +20,23 @@ namespace Htmlizer.Tests
             {
                 Text = "Hello"
             };
-            string result = tag.ToHtml();
-            Assert.That(result, Is.EqualTo("<h1>Hello</h1>"));
+            Assert.That(tag.ToHtml(), Is.EqualTo("<h1>Hello</h1>"));
         }
         [Test]
         public void NestedTagPararaphTest()
         {
-            var paragraph = new Paragraph() { Text= "hey"};
+            var paragraph = new Paragraph() { Text = "hey" };
             paragraph.AddChild(new Italic { Text = "Hello" });
-            string result = paragraph.ToHtml();
-            Assert.That(result, Is.EqualTo("<p>hey<i>Hello</i></p>"));
+            Assert.That(paragraph.ToHtml(), Is.EqualTo("<p>hey<i>Hello</i></p>"));
+        }
+
+        [Test]
+        public void HtmlFileTest()
+        {
+            var html = new Html();
+            html.Body.AddChild(new Paragraph() { Text = "Hello world!" });
+
+            Assert.That(html.ToHtml(), Is.EqualTo("<html><head></head><body><p>Hello world!</p></body></html>"));
         }
     }
 }
