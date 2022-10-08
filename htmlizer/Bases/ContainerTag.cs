@@ -8,18 +8,9 @@ using System.Threading.Tasks;
 
 namespace Htmlizer.Bases
 {
-    public abstract class ContainerTag : IHtmlTag
+    public abstract class ContainerTag : TagBase
     {
-        public abstract string Name { get; }
-        public string Text { get; set; } = string.Empty;
-        public Tagtype TagType => Tagtype.Container;
-        public IEnumerable<IHtmlAttribute> Attributes { get; } = new List<IHtmlAttribute>();
-        public IEnumerable<IHtmlTag> Children { get; set; } = new List<IHtmlTag>();
-        public IEnumerable<IHtmlAttribute> SupportdAttributes { get; } = new List<IHtmlAttribute>();
-        public IEnumerable<IHtmlAttribute> RequiredAttributes { get; } = new List<IHtmlAttribute>();
-        public void AddAttribute(IHtmlAttribute attribute)
-        {
-            Attributes.Append(attribute);
-        }
+        public override string Text { get; set; } = string.Empty;
+        public override Tagtype TagType => Tagtype.Container;
     }
 }

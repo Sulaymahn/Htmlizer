@@ -25,16 +25,10 @@ namespace Htmlizer.Tests
         [Test]
         public void NestedTagPararaphTest()
         {
-
-            var paragraph = new Paragraph()
-            {
-                Children = new List<IHtmlTag>
-                {
-                    new Italic { Text = "Hello" }
-                }
-            };
+            var paragraph = new Paragraph() { Text= "hey"};
+            paragraph.AddChild(new Italic { Text = "Hello" });
             string result = paragraph.ToHtml();
-            Assert.That(result, Is.EqualTo("<p><i>Hello</i></p>"));
+            Assert.That(result, Is.EqualTo("<p>hey<i>Hello</i></p>"));
         }
     }
 }
