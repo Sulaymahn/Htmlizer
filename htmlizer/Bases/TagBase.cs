@@ -1,4 +1,5 @@
 ﻿using Htmlizer.Constants;
+using Htmlizer.Engine;
 using Htmlizer.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,5 +20,6 @@ namespace Htmlizer.Bases
         public IEnumerable<IHtmlAttribute> RequiredAttributes { get; protected set; } = new List<IHtmlAttribute>();
         public virtual void AddAttribute(IHtmlAttribute attribute) => Attributes = Attributes.Append(attribute);
         public virtual void AddChild(IHtmlTag tag) => Children = Children.Append(tag);
+        public override string ToString() => this.ToHtml();
     }
 }

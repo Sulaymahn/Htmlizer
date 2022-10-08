@@ -16,27 +16,23 @@ namespace Htmlizer.Tests
         [Test]
         public void SingleTagH1Test()
         {
-            var tag = new Heading(1)
-            {
-                Text = "Hello"
-            };
-            Assert.That(tag.ToHtml(), Is.EqualTo("<h1>Hello</h1>"));
+            var tag = "Hello".ToHeading(1);
+            Assert.That($"{tag}", Is.EqualTo("<h1>Hello</h1>"));
         }
         [Test]
         public void NestedTagPararaphTest()
         {
-            var paragraph = new Paragraph() { Text = "hey" };
-            paragraph.AddChild(new Italic { Text = "Hello" });
-            Assert.That(paragraph.ToHtml(), Is.EqualTo("<p>hey<i>Hello</i></p>"));
+            var paragraph = "hey".ToParagraph(); 
+            paragraph.AddChild("Hello".ToItalic());
+            Assert.That($"{paragraph}", Is.EqualTo("<p>hey<i>Hello</i></p>"));
         }
 
         [Test]
         public void HtmlFileTest()
         {
             var html = new Html();
-            html.Body.AddChild(new Paragraph() { Text = "Hello world!" });
-
-            Assert.That(html.ToHtml(), Is.EqualTo("<html><head></head><body><p>Hello world!</p></body></html>"));
+            html.Body.AddChild("Hello world!".ToParagraph());
+            Assert.That($"{html}", Is.EqualTo("<html><head></head><body><p>Hello world!</p></body></html>"));
         }
     }
 }
