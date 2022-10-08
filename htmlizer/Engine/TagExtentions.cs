@@ -1,4 +1,5 @@
 ﻿using htmlizer.Interfaces;
+using Htmlizer.Constants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +15,16 @@ namespace Htmlizer.Engine
             var sb = new StringBuilder();
             switch (tag.TagType)
             {
-                case Constants.Tagtype.Container:
+                case Tagtype.Container:
+                case Tagtype.Text:
                     sb.Append($"<{tag.Name}");
-                    foreach(var attribute in tag.Attributes)
+                    foreach (var attribute in tag.Attributes)
                     {
                         sb.Append($" {attribute.Name}=\"{attribute.Value}\"");
                     }
                     sb.Append('>');
-                    if (!string.IsNullOrEmpty(tag.Text)){
+                    if (!string.IsNullOrEmpty(tag.Text))
+                    {
                         sb.Append(tag.Text);
                     }
                     foreach (var innertag in tag.Children)
@@ -30,7 +33,7 @@ namespace Htmlizer.Engine
                     }
                     sb.Append($"</{tag.Name}>");
                     return sb.ToString();
-                case Constants.Tagtype.NonContainer:
+                case Tagtype.NonContainer:
                     sb.Append($"<{tag.Name}");
                     foreach (var attribute in tag.Attributes)
                     {

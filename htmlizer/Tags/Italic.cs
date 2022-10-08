@@ -1,5 +1,4 @@
-﻿using htmlizer.Interfaces;
-using Htmlizer.Bases;
+﻿using Htmlizer.Bases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Htmlizer.Tags
 {
-    public sealed class H1 : ContainerTag
+    public class Italic : TextTag
     {
-        public override string Name { get => nameof(H1).ToLower(); }
+        public override string Name => "i";
         public override string Text { get; set; } = string.Empty;
     }
 }

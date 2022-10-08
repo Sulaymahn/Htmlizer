@@ -9,6 +9,7 @@ namespace Htmlizer.Constants
     public enum Tagtype
     {
         Container,
-        NonContainer
+        NonContainer,
+        Text
     }
 }

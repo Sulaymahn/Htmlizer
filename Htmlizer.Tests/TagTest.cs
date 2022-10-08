@@ -1,7 +1,7 @@
+using htmlizer.Interfaces;
 using Htmlizer.Engine;
 using Htmlizer.Tags;
 using NUnit.Framework;
-using System.Security.Cryptography;
 
 namespace Htmlizer.Tests
 {
@@ -15,12 +15,26 @@ namespace Htmlizer.Tests
         [Test]
         public void SingleTagH1Test()
         {
-            var tag = new H1
+            var tag = new Heading(1)
             {
                 Text = "Hello"
             };
             string result = tag.Print();
             Assert.That(result, Is.EqualTo("<h1>Hello</h1>"));
+        }
+        [Test]
+        public void NestedTagPararaphTest()
+        {
+
+            var paragraph = new Paragraph()
+            {
+                Children = new List<IHtmlTag>
+                {
+                    new Italic { Text = "Hello" }
+                }
+            };
+            string result = paragraph.Print();
+            Assert.That(result, Is.EqualTo("<p><i>Hello</i></p>"));
         }
     }
 }
