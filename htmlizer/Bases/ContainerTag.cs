@@ -11,7 +11,7 @@ namespace Htmlizer.Bases
     public abstract class ContainerTag : IHtmlTag
     {
         public abstract string Name { get; }
-        public abstract string Text { get; set; }
+        public string Text { get; set; } = string.Empty;
         public Tagtype TagType => Tagtype.Container;
         public IEnumerable<IHtmlAttribute> Attributes { get; } = new List<IHtmlAttribute>();
         public IEnumerable<IHtmlTag> Children { get; set; } = new List<IHtmlTag>();

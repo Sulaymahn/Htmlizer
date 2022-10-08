@@ -10,6 +10,5 @@ namespace Htmlizer.Tags
     public class Div : ContainerTag
     {
         public override string Name => "div";
-        public override string Text { get; set; } = string.Empty;
     }
 }

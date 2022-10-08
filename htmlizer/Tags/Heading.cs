@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Htmlizer.Tags
 {
-    public sealed class Heading : ContainerTag
+    public sealed class Heading : TextTag
     {
         public override string Name { get => $"h{Number}"; }
         public override string Text { get; set; } = string.Empty;
