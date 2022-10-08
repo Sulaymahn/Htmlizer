@@ -1,4 +1,4 @@
-using htmlizer.Interfaces;
+using Htmlizer.Interfaces;
 using Htmlizer.Engine;
 using Htmlizer.Tags;
 using NUnit.Framework;

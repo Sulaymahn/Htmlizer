@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace htmlizer.Interfaces
+namespace Htmlizer.Interfaces
 {
     public interface IHtmlAttribute
     {

@@ -1,4 +1,4 @@
-﻿using htmlizer.Interfaces;
+﻿using Htmlizer.Interfaces;
 using Htmlizer.Constants;
 using System;
 using System.Collections.Generic;
@@ -29,7 +29,7 @@ namespace Htmlizer.Engine
                     }
                     foreach (var innertag in tag.Children)
                     {
-                        innertag.Print();
+                        sb.Append(innertag.Print());
                     }
                     sb.Append($"</{tag.Name}>");
                     return sb.ToString();

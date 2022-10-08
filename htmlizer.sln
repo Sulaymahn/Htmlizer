@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32721.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Htmlizer", "htmlizer\Htmlizer.csproj", "{9FFEF7C2-AA61-43B2-858B-9AB35F05C72B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Htmlizer", "htmlizer\Htmlizer.csproj", "{9FFEF7C2-AA61-43B2-858B-9AB35F05C72B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Htmlizer.Tests", "Htmlizer.Tests\Htmlizer.Tests.csproj", "{DD28AF44-7143-4885-A7AF-CDA5B9F40998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Htmlizer.Tests", "Htmlizer.Tests\Htmlizer.Tests.csproj", "{DD28AF44-7143-4885-A7AF-CDA5B9F40998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHtmlSite", "SimpleHtmlSite\SimpleHtmlSite.csproj", "{753C30DD-54DC-4B4A-9575-465FAD24379B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DD28AF44-7143-4885-A7AF-CDA5B9F40998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD28AF44-7143-4885-A7AF-CDA5B9F40998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD28AF44-7143-4885-A7AF-CDA5B9F40998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753C30DD-54DC-4B4A-9575-465FAD24379B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753C30DD-54DC-4B4A-9575-465FAD24379B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753C30DD-54DC-4B4A-9575-465FAD24379B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753C30DD-54DC-4B4A-9575-465FAD24379B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
