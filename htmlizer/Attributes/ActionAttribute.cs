@@ -9,5 +9,7 @@ namespace Htmlizer.Attributes
 {
     public class ActionAttribute : IHtmlAttribute
     {
+        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Value { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }
