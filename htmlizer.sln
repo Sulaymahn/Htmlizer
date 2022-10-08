@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32721.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Htmlizer", "htmlizer\Htmlizer.csproj", "{9FFEF7C2-AA61-43B2-858B-9AB35F05C72B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FFEF7C2-AA61-43B2-858B-9AB35F05C72B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FFEF7C2-AA61-43B2-858B-9AB35F05C72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FFEF7C2-AA61-43B2-858B-9AB35F05C72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FFEF7C2-AA61-43B2-858B-9AB35F05C72B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DDE9F00-B8AB-480A-8CE0-894B418254B8}
+	EndGlobalSection
+EndGlobal
