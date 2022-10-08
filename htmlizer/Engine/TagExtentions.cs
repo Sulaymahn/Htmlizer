@@ -10,7 +10,7 @@ namespace Htmlizer.Engine
 {
     public static class TagExtentions
     {
-        public static string Print(this IHtmlTag tag)
+        public static string ToHtml(this IHtmlTag tag)
         {
             var sb = new StringBuilder();
             switch (tag.TagType)
@@ -29,7 +29,7 @@ namespace Htmlizer.Engine
                     }
                     foreach (var innertag in tag.Children)
                     {
-                        sb.Append(innertag.Print());
+                        sb.Append(innertag.ToHtml());
                     }
                     sb.Append($"</{tag.Name}>");
                     return sb.ToString();

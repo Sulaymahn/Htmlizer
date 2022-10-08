@@ -1,4 +1,4 @@
-﻿using htmlizer.Interfaces;
+﻿using Htmlizer.Interfaces;
 using Htmlizer.Bases;
 
 namespace Htmlizer.Tags

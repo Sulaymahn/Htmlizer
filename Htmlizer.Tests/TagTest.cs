@@ -19,7 +19,7 @@ namespace Htmlizer.Tests
             {
                 Text = "Hello"
             };
-            string result = tag.Print();
+            string result = tag.ToHtml();
             Assert.That(result, Is.EqualTo("<h1>Hello</h1>"));
         }
         [Test]
@@ -33,7 +33,7 @@ namespace Htmlizer.Tests
                     new Italic { Text = "Hello" }
                 }
             };
-            string result = paragraph.Print();
+            string result = paragraph.ToHtml();
             Assert.That(result, Is.EqualTo("<p><i>Hello</i></p>"));
         }
     }

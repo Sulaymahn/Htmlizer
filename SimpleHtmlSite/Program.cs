@@ -1,13 +1,9 @@
-﻿using Htmlizer.Interfaces;
-using Htmlizer.Engine;
+﻿using Htmlizer.Engine;
 using Htmlizer.Tags;
 
 var paragraph = new Paragraph()
-{
-    Children = new List<IHtmlTag> { new Italic { Text = "Hello" } }
+{ 
+    Text = $" I am so {new Italic() { Text = "Angry"}.ToHtml()}"
 };
 
-Console.WriteLine(paragraph.Print());
-
-
-
+Console.WriteLine(paragraph.ToHtml());
