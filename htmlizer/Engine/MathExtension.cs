@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Htmlizer.Engine
 {
-    public static class MathExtensions
+    public static class MathExtension
     {
         public static int WithinInterval(this int value, int min, int max)
         {

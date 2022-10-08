@@ -31,8 +31,9 @@ namespace Htmlizer.Tests
         public void HtmlFileTest()
         {
             var html = new Html();
+            html.Head.Add("Htmlizer".ToTitle());
             html.Body.Add("Hello world!".ToParagraph());
-            Assert.That($"{html}", Is.EqualTo("<html><head></head><body><p>Hello world!</p></body></html>"));
+            Assert.That($"{html}", Is.EqualTo("<!DOCTYPE html><html><head><title>Htmlizer</title></head><body><p>Hello world!</p></body></html>"));
         }
     }
 }

@@ -2,11 +2,7 @@
 using Htmlizer.Tags;
 
 
-var paragraph = new Paragraph()
-{ 
-    Text = $" I am so {new Italic() { Text = "Angry"}.ToHtml()}"
-};
-var div = new Div();
-div.Add(paragraph);
-
-Console.WriteLine(paragraph.ToHtml());
+var html = new Html();
+html.Head.Add("Htmlizer".ToTitle());
+html.Body.Add("Hello world!".ToHeading(1));
+html.Compile(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "index");
