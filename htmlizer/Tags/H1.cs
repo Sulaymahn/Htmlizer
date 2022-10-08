@@ -1,12 +1,13 @@
-﻿using System;
+﻿using htmlizer.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace htmlizer.Interfaces
+namespace Htmlizer.Tags
 {
-    public interface IHtmlDom
+    public class H1 : IHtmlTag
     {
     }
 }
